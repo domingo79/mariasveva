@@ -5,7 +5,7 @@ import streamlit as st
 from docx import Document
 from PIL import Image
 
-st.set_page_config(page_title="Tesina Maria Sveva", layout="centered")
+st.set_page_config(page_title="Maria Sveva", layout="centered")
 
 BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "DEFINITIVA")
 
