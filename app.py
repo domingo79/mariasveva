@@ -184,3 +184,27 @@ elif section["type"] == "conclusioni":
 elif section["type"] == "ringraziamenti":
     st.title("Ringraziamenti")
     st.markdown(read_text("ringraziamenti finali.docx"))
+
+
+# --- FOOTER ---
+st.markdown("""
+<style>
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 0.78rem;
+    color: #666;
+    z-index: 999;
+    backdrop-filter: blur(4px);
+}
+</style>
+<div class="footer">
+    © 2025 <strong>Maria Sveva Fuzio</strong> — Tutti i diritti riservati
+</div>
+""", unsafe_allow_html=True)
