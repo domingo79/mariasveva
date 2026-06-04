@@ -5,7 +5,7 @@ import streamlit as st
 from docx import Document
 from PIL import Image
 
-st.set_page_config(page_title="Tesina", layout="centered")
+st.set_page_config(page_title="Tesina Maria Sveva", layout="centered")
 
 BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "DEFINITIVA")
 
@@ -19,7 +19,8 @@ BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "DEFINITIVA")
 # Per MODIFICARE un titolo: cambia solo la stringa titolo_completo.
 CHAPTERS = [
     ("primo",      "I",    'Italo Calvino e il segreto del ritmo ne "Le mille e una notte"'),
-    ("secondo",    "II",   "Le pont entre deux mondes: Antoine Galland et la magie de l'Orient"),
+    ("secondo",    "II",
+     "Le pont entre deux mondes: Antoine Galland et la magie de l'Orient"),
     ("terzo",      "III",  'Le radici geografiche de "Le mille e una notte"'),
     ("quarto",     "IV",   'La spiritualità islamica ne "Le mille e una notte"'),
     ("quinto",     "V",    "Il Medio Oriente: un'area senza pace"),
@@ -151,7 +152,8 @@ elif section["type"] == "dedica":
 
 elif section["type"] == "introduzione":
     st.title("Introduzione")
-    st.markdown(read_text("Introduzione testo.docx", skip_label="INTRODUZIONE"))
+    st.markdown(read_text("Introduzione testo.docx",
+                skip_label="INTRODUZIONE"))
     images = extract_images("INTRODUZIONE.docx")
     if images:
         st.divider()
@@ -159,10 +161,11 @@ elif section["type"] == "introduzione":
             st.image(img, use_container_width=True)
 
 elif section["type"] == "chapter":
-    name  = section["name"]
+    name = section["name"]
     roman = section["roman"]
     st.title(f"Capitolo {roman}")
-    st.markdown(read_text(f"capitolo {name} testo.docx", skip_chapter_label=True))
+    st.markdown(
+        read_text(f"capitolo {name} testo.docx", skip_chapter_label=True))
     images = extract_images(f"CAPITOLO {name.upper()}.docx")
     if images:
         st.divider()
