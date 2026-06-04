@@ -1,0 +1,14 @@
+# Ambienti virtuali
+.venv/
+venv/
+
+# segreti
+.env
+
+# File di Configurazione IDE / Editor
+.vscode/
+
+# File compilati di Python e cache
+__pycache__/
+*.py[cod]
+*$py.class
