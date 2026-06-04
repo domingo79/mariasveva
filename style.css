@@ -1,0 +1,62 @@
+/* =========================================================
+   RESPONSIVE STYLES — elimina questo file per tornare al
+   layout originale senza toccare app.py
+   ========================================================= */
+
+/* --- FOOTER: evita che copra il testo su schermi piccoli --- */
+@media (max-width: 768px) {
+    .footer {
+        position: relative !important;
+        margin-top: 2rem;
+    }
+}
+
+/* --- SIDEBAR: testo più leggibile, titoli che vanno a capo --- */
+@media (max-width: 768px) {
+    section[data-testid="stSidebar"] {
+        min-width: 85vw !important;
+        max-width: 90vw !important;
+    }
+
+    section[data-testid="stSidebar"] label {
+        font-size: 0.82rem !important;
+        white-space: normal !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* --- TESTO PRINCIPALE: font leggibile su mobile --- */
+@media (max-width: 768px) {
+    .stMarkdown p {
+        font-size: 1rem !important;
+        line-height: 1.75 !important;
+    }
+
+    h1 {
+        font-size: 1.5rem !important;
+    }
+
+    h2 {
+        font-size: 1.25rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+}
+
+/* --- IMMAGINI: nessun overflow orizzontale --- */
+@media (max-width: 768px) {
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* --- PADDING GENERALE: più respiro sui tablet --- */
+@media (max-width: 1024px) {
+    .block-container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}

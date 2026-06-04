@@ -7,6 +7,14 @@ from PIL import Image
 
 st.set_page_config(page_title="Maria Sveva", layout="centered")
 
+# --- STILI RESPONSIVI (opzionali) ---
+# Carica style.css se presente: contiene media query per mobile/tablet.
+# Per tornare al layout originale basta eliminare style.css, senza toccare questo file.
+_css_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "style.css")
+if os.path.exists(_css_path):
+    with open(_css_path) as _f:
+        st.markdown(f"<style>{_f.read()}</style>", unsafe_allow_html=True)
+
 BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "DEFINITIVA")
 
 # --- ELENCO DEI CAPITOLI ---
